@@ -1,0 +1,99 @@
+/* body{
+    background-color: aqua;
+} */
+
+/* MEDIA QUERY 1170px */
+@media (max-width: 1170px) {
+
+    /* GENERAL CSS START */
+    .sectionSubtitle {
+        max-width: 60%;
+    }
+
+    /* GENERAL CSS END */
+
+    /* BANNER SECTION CSS START */
+    .bannerSection .carousel-item {
+        height: 90vh;
+    }
+
+    /* BANNER SECTION CSS END */
+}
+
+/* MEDIA QUERY 991px */
+@media (max-width: 991px) {
+
+    /* GENERAL CSS START */
+    .about .bannerSection,
+    .product .bannerSection,
+    .gallery .bannerSection,
+    .contact .bannerSection,
+    .fourZeroFour .bannerSection {
+        padding-top: 12.5rem;
+        padding-bottom: 3rem;
+    }
+
+    /* GENERAL CSS END */
+
+    /* NAVBAR CSS START */
+    .heder .navbar {
+        background-size: contain;
+        padding: 2rem;
+    }
+
+    .header .navbar {
+        background-size: cover;
+        padding: 2rem;
+    }
+
+    .header .navbar-nav {
+        margin-top: 2rem;
+    }
+
+    .header .navbar-nav .nav-link {
+        padding: 0.2rem 0.5rem;
+        margin-bottom: 1rem;
+    }
+
+    .header .headerRight span {
+        padding: 0.2rem 0.5rem;
+    }
+
+    /* NAVBAR CSS END */
+}
+
+/* MEDIA QUERY 767px */
+@media (max-width: 767px) {
+
+    /* GENERAL CSS START */
+    body,
+    html {
+        font-size: 8px;
+    }
+
+
+    /* GENERAL CSS END */
+
+    /* BANNER SECTION CSS START */
+    .bannerSection {
+        min-height: 70vh;
+    }
+
+    .bannerSection{
+        
+    }
+
+    /* BANNER SECTION CSS END */
+}
+
+/* MEDIA QUERY 590px */
+@media (max-width: 590px) {
+
+    /* GENERAL CSS START */
+    body,
+    html {
+        font-size: 7px;
+    }
+
+    /* GENERAL CSS END */
+}

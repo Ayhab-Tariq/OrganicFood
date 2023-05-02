@@ -1,0 +1,720 @@
+/* IMPORTING FONT_FAMILY */
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@200;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap');
+
+
+/* COMMON CSS STYLES START */
+*,
+*::before,
+*::after {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    outline: none;
+}
+
+:root {
+    /* Background Color */
+    --bg-white: #ffffff;
+    --bg-dark-color: #03262c;
+
+    /* Text Color */
+    --primary-text: #061738;
+    --secondary-color: #60cd12;
+    --light-color: #e2f6de;
+    --dark-color: #03262c;
+    --text-white: #ffffff;
+    --text-gray: #dee2e6;
+    --anchor-color: #007aff;
+
+    /* Font Family */
+    --primary-font: 'Barlow Condensed', sans-serif;
+    --secondary-font: 'Roboto' sans-serif;
+}
+
+body,
+html {
+    color: var(--primary-text);
+    font-size: 10px;
+    font-weight: 400;
+    font-family: var(--primary-font);
+    scroll-behavior: smooth;
+    line-height: 1.5;
+    overflow-x: hidden;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h5,
+p {
+    margin: 0;
+}
+
+h1 {
+    font-size: 9rem;
+    line-height: 1.4;
+    font-weight: 600;
+    color: var(--primary-text);
+}
+
+h2 {
+    color: var(--primary-text);
+    font-size: 4.7rem;
+    font-weight: 600;
+    display: inline-block;
+    text-transform: capitalize;
+    line-height: 1.2;
+    margin-bottom: 2rem;
+}
+
+h3 {
+    color: var(--text-white);
+    font-size: 3.1rem;
+    line-height: 1.2;
+    font-weight: 700;
+}
+
+h4 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    line-height: 1;
+    color: var(--primary-text);
+}
+
+h5 {
+    font-size: 1.8rem;
+    font-weight: 600;
+    line-height: 1;
+    color: var(--primary-text);
+}
+
+p {
+    font-size: 1.6rem;
+    line-height: 1.6;
+    margin-top: 1rem;
+    color: var(--primary-text);
+    font-family: var(--secondary-font);
+}
+
+embed,
+iframe,
+img,
+object {
+    max-width: 100%;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+a,
+a:active,
+a:focus,
+a:hover,
+button {
+    text-decoration: none;
+    outline: 0;
+}
+
+li a {
+    color: var(--text-white);
+}
+
+a:hover,
+button:hover {
+    -webkit-transition: all 0.3s ease-in;
+    -o-transition: all 0.3s ease-in;
+    -moz-transition: all 0.3s ease-in;
+}
+
+::-webkit-scrollbar {
+    width: 1rem;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--bg-white);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--secondary-color);
+}
+
+.mainBtn {
+    position: relative;
+    color: var(--bg-white);
+    background: linear-gradient(to right, #0f7404, #5cb917);
+    z-index: 1;
+    overflow: hidden;
+    border: 0.2rem solid var(--bg-white);
+    border-radius: 3.5rem;
+    text-transform: uppercase;
+    padding: 1rem 3.5rem;
+    font-weight: 600;
+    font-size: 1.8rem;
+    margin-top: 1.5rem;
+    letter-spacing: 0.2rem;
+}
+
+.mainBtn:hover {
+    background: var(--bg-white);
+    color: var(--secondary-color);
+    border: 0.2rem solid var(--secondary-color);
+}
+
+section {
+    padding: 5rem 0;
+}
+
+.sectionTitle {
+    font-size: 4rem;
+    font-weight: 600;
+    color: var(--primary-text);
+    text-transform: capitalize;
+    margin-bottom: 2rem;
+}
+
+.sectionSubtitle {
+    font-size: 1.6rem;
+    font-weight: 500;
+    color: var(--primary-text);
+    font-family: var(--secondary-font);
+    max-width: 40%;
+    margin: auto;
+    margin-bottom: 1.5rem;
+}
+
+.about .bannerSection,
+.product .bannerSection,
+.gallery .bannerSection,
+.contact .bannerSection,
+.fourZeroFour .bannerSection {
+    background-image: url(../images/banner-slide/top-banner.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding-top: 17rem;
+    padding-bottom: 10rem;
+    min-height: auto;
+}
+
+/* COMMON CSS STYLES END */
+
+
+/* CSS FOR NAVBAR START */
+
+.header {
+    position: absolute;
+    width: 100%;
+    top: 2rem;
+    left: 0;
+    z-index: 2;
+}
+
+.header .navbar {
+    background-image: url(../images/header-bg.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    padding: 2rem 5rem;
+}
+
+.header .navbar-brand {
+    width: 7.5rem;
+    margin-top: -0.1rem;
+}
+
+.header .navbar-nav .nav-link {
+    color: var(--text-white);
+    text-transform: uppercase;
+    font-size: 1.6rem;
+    font-weight: 600;
+    padding: 0.5rem 2rem;
+    margin: 0 0.2rem;
+    font-family: var(--primary-font);
+}
+
+.header .navbar-nav .nav-link:hover,
+.header .navbar-nav .nav-link.active {
+    color: var(--secondary-color);
+}
+
+.header .navbar-toggler {
+    color: var(--text-white);
+    font-size: 2rem;
+    height: 2.7rem;
+    padding: 0;
+    border: none;
+
+}
+
+/* .header .navbar-toggler:focus{
+    outline: none;
+    box-shadow: none;
+} */
+
+.header .headerRight span {
+    color: var(--secondary-color);
+    display: block;
+    font-weight: 700;
+    font-size: 1.4rem;
+    margin-right: 1rem;
+}
+
+.header .headerRight .phoneNo {
+    color: var(--text-white);
+    font-size: 1.6rem;
+}
+
+.headerScrolled {
+    position: fixed;
+    top: -0.4rem;
+    left: 0;
+    right: 0;
+    width: 100%;
+    max-width: 1320px;
+    margin: auto;
+    z-index: 999;
+    transition: 0.3s all ease-in-out;
+}
+
+/* CSS FOR NAVBAR END */
+
+
+/* CSS FOR BANNER START */
+.bannerSection {
+    background: url('../images/banner-slide/Banner-1.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    min-height: 90vh;
+}
+
+.bannerSection .carousel-item {
+    padding: 3rem 0;
+    height: 90vh;
+}
+
+.bannerSection .carousel-caption {
+    top: 30%;
+    bottom: 0;
+    left: 3%;
+    right: 0;
+    text-align: left;
+    width: 100%;
+}
+
+.bannerSection .carousel-caption h3 {
+    padding: 0.5rem 1.5rem;
+    background-color: var(--dark-color);
+    display: inline;
+}
+
+.bannerSection .carousel-caption p {
+    max-width: 40rem;
+    margin-bottom: 2rem;
+}
+
+/* CSS FOR BANNER END */
+
+
+/* CSS FOR FEATURES START */
+.featureSection .featuresBox {
+    background-color: transparent;
+    border: 0.15rem solid var(--light-color);
+    padding: 8rem 0;
+    transition: all 0.3s;
+}
+
+.featureSection .featuresIconBorder {
+    background-color: transparent;
+    border-radius: 50%;
+    border: 0.2rem solid var(--light-color);
+    padding: 1.3rem;
+    display: inline-block;
+}
+
+.featureSection .featuresBox .featuresIcon {
+    height: 6.5rem;
+    width: 6.5rem;
+    background-color: var(--light-color);
+    margin: auto;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.featureSection .featuresBox .featuresIcon img {
+    width: 3.7rem;
+}
+
+.featureSection .featuresBox h3 {
+    margin-top: 1.25rem;
+    color: var(--primary-text);
+}
+
+.featureSection .featuresBox:hover {
+    background-color: var(--bg-dark-color);
+    border-color: var(--bg-dark-color);
+}
+
+.featureSection .featuresBox:hover h3 {
+    color: var(--text-white);
+}
+
+.featureSection .featuresBox:hover .featuresIconBorder {
+    border-color: var(--secondary-color);
+}
+
+/* CSS FOR FEATURES END */
+
+
+/* CSS FOR ABOUT SECTION IN HOME PAGE START */
+.landingAboutSection {
+    background: url(../images/about/about-banner.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    padding: 9rem 0;
+}
+
+.landingAboutSection p {
+    color: var(--primary-text);
+    margin-bottom: 2rem;
+}
+
+/* CSS FOR ABOUT SECTION IN HOME PAGE END */
+
+
+/* CSS FOR PRODUCT CARD DESIGN START */
+.landingProductSection .productCard {
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    border: 0.2rem solid var(--light-color);
+    padding: 2rem 1rem;
+    transition: all 0.3s;
+}
+
+.landingProductSection .productCard .productImage {
+    margin-bottom: 7rem;
+    text-align: center;
+}
+
+.landingProductSection .productCard h3 {
+    color: var(--primary-text);
+}
+
+.landingProductSection .productCard span {
+    font-size: 1.8rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: var(--secondary-color);
+    margin-right: 0.5rem;
+    text-decoration: line-through;
+    transition: all 0.3s;
+}
+
+.landingProductSection .productCard .productDetail {
+    position: absolute;
+    bottom: -22rem;
+    right: 0;
+    left: 0;
+    text-align: center;
+    padding: 5rem 1rem;
+    background-color: var(--dark-color);
+    transition: all 0.3s ease;
+}
+
+.landingProductSection .productCard:hover .productDetail {
+    bottom: 0;
+}
+
+/* CSS FOR PRODUCT CARD DESIGN END */
+
+
+/* CSS FOR TESTIMONIAL START */
+.testimonialSection {
+    background-color: var(--light-color);
+    padding-bottom: 8rem;
+}
+
+.testimonialSection .carousel-indicators {
+    bottom: -6rem;
+}
+
+.testimonialSection .carousel-indicators {
+    bottom: -6rem;
+}
+
+.testimonialSection .carousel-indicators button {
+    background-color: var(--dark-color);
+    width: 1.2rem;
+    height: 1.2rem;
+    border-radius: 50%;
+}
+
+.testimonialSection .card {
+    background: url('../images/testimonial/testimonial-bg.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    text-align: right;
+    padding: 5rem 5rem 5rem 0;
+    border-radius: 0 .5rem .5rem 0;
+    border: 0.1rem solid transparent;
+}
+
+.testimonialSection .profileBox {
+    padding: 1.875rem;
+    background-color: var(--dark-color);
+    border-radius: .5rem 0 0 .5rem;
+}
+
+.testimonialSection .profileBox img {
+    border-radius: .625rem 3.125rem;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.testimonialSection .descriptionBox {
+    padding-left: 2.5rem;
+}
+
+/* CSS FOR TESTIMONIAL END */
+
+
+/* CSS FOR GALLERY START */
+
+.gallerySection img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* CSS FOR GALLERY END */
+
+
+/* CSS FOR FOOTER START */
+.footerSection {
+    background: url("../images/footer-bg/footer_bg.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top center;
+    padding-top: 15rem;
+    padding-bottom: 0rem;
+}
+
+.footerSection h5 {
+    color: var(--text-white);
+    font-size: 2.5rem;
+    margin-bottom: 1.25rem;
+}
+
+.footerSection ul li {
+    margin-bottom: 0.5rem;
+    list-style: none;
+}
+
+.footerSection .companyDetails {
+    font-size: 1.4rem;
+}
+
+.footerSection .contactInfo li a {
+    color: var(--text-gray);
+    font-size: 1.6rem;
+}
+
+.footerSection .linkWidget li a,
+.footerSection p {
+    color: var(--text-gray);
+    font-size: 1.6rem;
+    padding-left: 1.5rem;
+    position: relative;
+    -webkit-transition: all 0.3s ease-out 0s;
+    transition: all 0.3s ease-out 0s;
+}
+
+/* CREATING NEXT ARROW START*/
+.footerSection .linkWidget li a:before {
+    content: '\f105';
+    font-family: "Font Awesome 6 Free";
+    font-weight: 900;
+    position: absolute;
+    left: 0.3rem;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+
+.footerSection .linkWidget li a:hover {
+    margin-left: .625rem;
+    color: var(--secondary-color);
+}
+
+/* CREATING NEXT ARROW END*/
+
+.footerSection .socialNetwork a {
+    width: 3.5rem;
+    height: 3.5rem;
+    line-height: 3.2rem;
+    font-size: 1.2rem;
+    margin: .5rem;
+    display: inline-block;
+    border: 0.125rem solid var(--text-gray);
+    color: var(--text-gray);
+    text-align: center;
+    border-radius: 100%;
+    -webkit-transition: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+    transition: all 0.3s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+
+.footerSection .socialNetwork a:hover {
+    background-color: var(--secondary-color);
+    border-color: var(--secondary-color);
+    color: var(--text-white);
+    box-shadow: 0 0.625rem .937rem 0 rgb(0 0 0/10%);
+    transform: translateY(-0.1875rem);
+}
+
+.footerSection .form-control {
+    font-size: 2rem;
+    color: var(--text-white);
+}
+
+.footerSection .form-control::placeholder {
+    color: var(--text-gray);
+}
+
+.footerSection .form-control:focus {
+    outline: none;
+    box-shadow: none;
+    border-color: var(--secondary-color);
+}
+
+.footerSection .copyrightSection {
+    background-color: var(--secondary-color);
+    text-align: center;
+    margin-top: 5rem;
+}
+
+.footerSection .copyrightSection p {
+    margin-top: 0;
+    padding: 3rem 0;
+    line-height: 0;
+    font-size: 1.8rem;
+    font-family: var(--primary-font);
+}
+
+.footerSection .copyrightSection a {
+    color: var(--primary-text);
+    font-weight: 600;
+    /* text-decoration: none; */
+}
+
+/* CSS FOR FOOTER END */
+
+
+/* ABOUT PAGE CSS START */
+.about .aboutDetails p {
+    color: var(--primary-text);
+    font-weight: 500;
+}
+
+/* ABOUT PAGE CSS END */
+
+
+/* PRODUCT PAGE CSS START */
+.productSection .productDetails p {
+    margin: 1.5rem;
+}
+/* PRODUCT PAGE CSS END */
+
+
+/* CONTACT PAGE CSS START */
+.contact .contactForm{
+    background-color: var(--light-color);
+    padding: 5rem;
+    box-shadow: 0 0.2rem 1.5rem rgb(0 0 0/4%);
+}
+
+.contact .contactForm .form-control:focus{
+    outline: none;
+    box-shadow: none;
+}
+
+.contact .contactForm .form-control::placeholder{
+    color: var(--primary-text);
+}
+
+.contact .contactForm .form-control{
+    padding: 1rem 1.5rem;
+    border: 0.1rem solid var(--secondary-color);
+    color: var(--primary-text);
+    font-size: 1.5rem;
+    font-weight: 400;
+    font-family: var(--secondary-font);
+}
+
+.contact .contactForm textarea{
+    min-height: 15rem;
+}
+
+.contact .contactForm .infoBox li{
+    position: relative;
+    padding: 0 0 3.5rem 7rem;
+    margin-bottom: 2.9rem;
+}
+
+.contact .contactForm .infoBox li i{
+    position: absolute;
+    left: 0;
+    top: 1.5rem;
+    font-size: 4.5rem;
+    line-height: 4.5rem;
+    color: var(--primary-text);
+}
+
+.contact .contactForm .infoBox li p{
+    color: var(--primary-text);
+}
+
+.contact .contactForm .infoBox li a{
+    color: var(--dark-color);
+    font-size: 2.5rem;
+    font-weight: 400;
+    margin-bottom: 0;
+    font-family: var(--secondary-font);
+}
+/* CONTACT PAGE CSS END */
+
+
+/* UPWARD BUTTON CSS START */
+.upwardButton i{
+    position: fixed;
+    right: 3%;
+    bottom: 10%;
+    color: var(--secondary-color);
+}
+
+.upwardButton i {
+    font-size: 3rem;
+}
+
+.upwardButton:hover i{
+    background: linear-gradient(to right, #0f7404, #5cb917);
+    border: 2px solid var(--dark-color);
+    color: #ffffff !important;
+
+    border-radius: 50%;
+    transition: all 0.3s;
+}
+/* UPWARD BUTTON CSS END */
